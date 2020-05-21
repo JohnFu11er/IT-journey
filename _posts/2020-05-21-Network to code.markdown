@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Network to Code "NTC""
+title: "Network to Code NTC"
 date: 2020-05-21 03:10:00 -0400
 categories: jekyll update
 ---
