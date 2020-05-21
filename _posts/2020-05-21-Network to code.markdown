@@ -11,4 +11,4 @@ Netbox resources:<br/>
 
 [NTC-website]: https://www.networktocode.com/
 [NTC-blog]: https://blog.networktocode.com/
-[NTC-slack]: slack.networktocode.com
+[NTC-slack]: http://slack.networktocode.com
