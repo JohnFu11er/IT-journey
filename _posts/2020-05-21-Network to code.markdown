@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Network to Code "NTC""
-date: 2020-05-21 03:00:00 -0400
+date: 2020-05-21 03:10:00 -0400
 categories: jekyll update
 ---
 Netbox resources:<br/>
