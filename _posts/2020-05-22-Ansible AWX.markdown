@@ -6,4 +6,4 @@ categories: jekyll update
 ---
 [How to install Ansible AWX with Docker-compose on CentOS 8][awx-install]
 
-[awx-install]: https://www.linuxtechi.com/install-ansible-awx-docker-compose-centos-8/
+[awx-install]: https://www.techrepublic.com/article/how-to-install-the-awx-ansible-web-gui-on-centos-8/
