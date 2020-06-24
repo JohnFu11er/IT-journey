@@ -13,7 +13,7 @@ Below is an example of a simple Hello World webpage built with Django.  This gui
 
 <h2>DJANGO SETUP</h2>
 
-<b>Provision CentOS 8 virtual machine. Once CentOS 8 is done installing, open a terminal window from the desktop.</b><br />
+<b>Provision CentOS 8 virtual machine.  Make sure that your system user is in the administrator group, and that the VM has internet connectivity. Once CentOS 8 is done installing, open a terminal window from the desktop.</b><br />
 <br />
 
 <b>Add EPEL repository:</b>
@@ -142,7 +142,7 @@ def welcome (request):
     return HttpResponse(“Hello, World!”)
 {% endhighlight %}<br /> 
 
-<b>Add a URL path to the project for your new webpage by opening the urls.py file, adding the following lines of red code, and saving the file (VS Code should auto-save the file, but you can check by clicking on “File”, then seeing if there is a check mark to the left of “Auto Save”).</b>
+<b>Add a URL path to the project for your new webpage by opening the urls.py file, adding the lines of code below, and saving the file (VS Code should auto-save the file, but you can check by clicking on “File”, then seeing if there is a check mark to the left of “Auto Save”).</b>
 {% highlight python %}
 from django.urls import path
 from .views import welcome
