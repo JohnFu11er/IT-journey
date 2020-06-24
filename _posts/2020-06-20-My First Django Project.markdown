@@ -13,7 +13,7 @@ Below is an example of a simple Hello World webpage built with Django.  This gui
 
 <h2>DJANGO SETUP</h2>
 
-<b>Provision CentOS 8 virtual machine.  Make sure that your system user is in the administrator group, and that the VM has internet connectivity. Once CentOS 8 is done installing, open a terminal window from the desktop.</b><br />
+<b>Provision a CentOS 8 virtual machine.  Make sure that your system user is in the administrator group, and that the VM has internet connectivity. Once CentOS 8 is done installing, open a terminal window from the desktop.</b><br />
 <br />
 
 <b>Add EPEL repository:</b>
