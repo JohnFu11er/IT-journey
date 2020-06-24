@@ -161,4 +161,4 @@ http://127.0.0.1:8000/welcome
 
 
 [django-howto]:https://www.youtube.com/watch?v=ovql0Ui3n_I&t=598s
-[github-todo]:https://github.com/JohnFu11er/Django_example_project
+[github-todo]:https://github.com/JohnFu11er/Django_example_todolist
