@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 Having never used Django before, but hearing about it from several people, I decided to look at this powerful program.
 
-Below is an example of a simple Hello World webpage built with Django.  This guide was built following [this video][django-howto].
+Below is an example of a simple Hello World webpage built with Django.  This guide was built following this [VIDEO][django-howto], and I have created a code repository of a working copy of the video's full application located [HERE][github-todo].
 <br/>
 <br/>
 <br/>
@@ -161,3 +161,4 @@ http://127.0.0.1:8000/welcome
 
 
 [django-howto]:https://www.youtube.com/watch?v=ovql0Ui3n_I&t=598s
+[github-todo]:https://github.com/JohnFu11er/Django_example_project
