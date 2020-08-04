@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 Variables can be defined several ways in Ansible. The below examples are running on the localhost (computer your are running ansible on).
 
-<b><h1>Ansible Special Variables</h1></b>
+<h1><b>Ansible Special Variables</b></h1>
 These are Ansible's three types of built-in variables:
     
 <b>Magic variables - </b> Variables that cannot be set directly by the user. For example:<br>
@@ -20,8 +20,8 @@ These are Ansible's three types of built-in variables:
 &emsp; <b><text style="color: red">ansible_host </text></b> - The IP/name of the target host to use instead of inventory_hostname.<br>
 &emsp; <b><text style="color: red">ansible_user </text></b> - the user Ansible "lgs in" as.<br>
 
-<b>Assign variables in a playbook</b>
-{% highlight ansible %}
+<h1><b>Assign variables in a playbook</h1></b>
+{% highlight yaml %}
 ---
 # Filename: Variable_test.yml
   - name: Variable Example Playbook
