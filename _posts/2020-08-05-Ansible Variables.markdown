@@ -18,9 +18,9 @@ These are Ansible's three types of built-in variables:
 <b>Connection variables -  </b> Variables that specify how to execute actions on a target. For Example: <br>
 &emsp; <b><text style="color: red">ansible_connection </text></b> - Connection plugin actually used for the task on the target host.<br>
 &emsp; <b><text style="color: red">ansible_host </text></b> - The IP/name of the target host to use instead of inventory_hostname.<br>
-&emsp; <b><text style="color: red">ansible_user </text></b> - the user Ansible "lgs in" as.<br>
+&emsp; <b><text style="color: red">ansible_user </text></b> - the user Ansible "logs in" as.<br>
 
-<h1><b>Assign variables in a playbook</h1></b>
+<h1><b>Assigning variables in a playbook</h1></b>
 {% highlight yaml %}
 ---
 # Filename: Variable_test.yml
@@ -28,10 +28,20 @@ These are Ansible's three types of built-in variables:
     hosts: localhost
 
     vars:
-      file_name: 
+      directory_name: notes
+      file_name: sprint_review
 
     tasks:
-      - name: 
+      - name: Create a directory named "notes" in the current directory
+        file:
+          path: ./{{ file_name }}
+          state: directory
+
+      - name: Create a file named "sprint_review" in the directory ./notes
+        file:
+          path: ./{{ directory_name }}/{{ file_name }}
+          state: touch
+
 
 {% endhighlight %}
 
