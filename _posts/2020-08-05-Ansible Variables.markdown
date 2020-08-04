@@ -6,13 +6,19 @@ categories: jekyll update
 ---
 Variables can be defined several ways in Ansible. The below examples are running on the localhost (computer your are running ansible on).
 
-<h1>Ansible three types of built-in variables </h1>
+<b><h1>Ansible Special Variables</h1></b>
+These are Ansible's three types of built-in variables:
     
-<b>Magic variables</b> - Variables that cannot be set directly by the user. For example:<br>
-&emsp; <b><text style="color: red">inventory_hostname</text></b> - The inventory name for the ‘current’ host being iterated over in the play<br><br>
+<b>Magic variables - </b> Variables that cannot be set directly by the user. For example:<br>
+&emsp; <b><text style="color: red">inventory_hostname</text></b> - The inventory name for the ‘current’ host being iterated over in the play<br>
 
-<b>Facts</b> - Variables that contain information pertinent to the current host (inventory_hostname). They are only available if gathered first. Gathering of facts is the default setting, and may be turned off with: gather_facts= no.<br>
-&emsp; <b><text style="color: red">ansible_facts</text></b> - contains any facts gathered or cached for the inventory_hostname<br>
+<b>Facts - </b> Variables that contain information pertinent to the current host (inventory_hostname). They are only available if gathered first. Gathering of facts is the default setting, and may be turned off with: gather_facts= no. For Example: <br>
+&emsp; <b><text style="color: red">ansible_facts</text></b> - Contains any facts gathered or cached for the inventory_hostname<br>
+
+<b>Connection variables -  </b> Variables that specify how to execute actions on a target. For Example: <br>
+&emsp; <b><text style="color: red">ansible_connection </text></b> - Connection plugin actually used for the task on the target host.<br>
+&emsp; <b><text style="color: red">ansible_host </text></b> - The IP/name of the target host to use instead of inventory_hostname.<br>
+&emsp; <b><text style="color: red">ansible_user </text></b> - the user Ansible "lgs in" as.<br>
 
 <b>Assign variables in a playbook</b>
 {% highlight ansible %}
