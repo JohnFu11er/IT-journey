@@ -37,7 +37,7 @@ Varibles are then called with the name of the variable encapsulated with double 
     tasks:
       - name: Create a directory named "notes" in the current directory
         file:
-          path: ./{\{\ file_name }\}\
+          path: ./&lcub;&lcub; file_name &rcub;&rcub;
           state: directory
 
       - name: Create a file named "sprint_review" in the directory ./notes
