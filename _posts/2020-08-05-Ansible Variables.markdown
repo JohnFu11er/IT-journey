@@ -6,9 +6,9 @@ categories: jekyll update
 ---
 Variables can be defined several ways in Ansible. The below examples are running on the localhost (computer your are running ansible on).
 
-<h1 style="color: orange">Ansible three types of built-in variables </h1>
-    <h2 style="color: red">Magic variables - cannot be set directly by the user. Ex:</h2>
-    inventory_hostname - The inventory name for the ‘current’ host being iterated over in the play<br><br>
+<h1>Ansible three types of built-in variables </h1>
+    <b>Magic variables</b> - cannot be set directly by the user. Ex:<br>
+    &emsp; <b><text style="color: red">inventory_hostname</text></b> - The inventory name for the ‘current’ host being iterated over in the play<br><br>
     <b>Facts</b> - variables that contain information pertinent to the current host (inventory_hostname). They are only available if gathered first. Gathering of facts is the default setting, and may be turned off with: gather_facts= no.</br>
         ansible_facts - contains any facts gathered or cached for the inventory_hostname</br>
 
