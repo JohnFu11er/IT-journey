@@ -42,7 +42,7 @@ These are Ansible's three types of built-in variables:
 
       - name: Create a file named "sprint_review" in the directory ./notes
         file:
-          path: ./{{ directory_name }}/{{ file_name }}
+          path: ./{# "directory_name" #}/{{ file_name }}
           state: touch
 
 
