@@ -4,19 +4,15 @@ title: "Working with variables in Ansible"
 date: 2020-08-05 08:00:00 -0400
 categories: jekyll update
 ---
-Variables can be defined several ways in Ansible:
+Variables can be defined several ways in Ansible. The below examples are running on the localhost (computer your are running ansible on).
 
-1. Assign variables in a playbook
+<b>Assign variables in a playbook</b>
 {% highlight ansible %}
 ---
-# File: Variable_test.yml
+# Filename: Variable_test.yml
   - name: Variable Example Playbook
-    hosts: localhost
-    gather_facts: yes
-
-    vars:
-      user_name: Bill
-      group_name: Bill
+    hosts: all
+    connection: network_
 
     tasks:
       - name: 
