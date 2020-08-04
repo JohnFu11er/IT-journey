@@ -23,7 +23,6 @@ These are Ansible's three types of built-in variables:
 <h1><b>Assigning variables in a playbook</b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables are created by defining their name and value under the section of your playbook named "vars:"<br>
 &emsp; <b><text style="color: red"> - </text></b>Varibles are then called with the name of the variable encapsulated with double curly-braces {{ variable_name }}<br>
-
 {% highlight yaml %}
 ---
 # Filename: Variable_test.yml
@@ -37,7 +36,7 @@ These are Ansible's three types of built-in variables:
     tasks:
       - name: Create a directory named "notes" in the current directory
         file:
-          path: ./'{'{ file_name }'}'
+          path: ./{{ "file_name }}"
           state: directory
 
       - name: Create a file named "sprint_review" in the directory ./notes
@@ -46,17 +45,13 @@ These are Ansible's three types of built-in variables:
           state: touch
 {% endhighlight %}
 
-2. Assigning group variables in an inventory file:
+<h1><b>Assigning variables in an inventory file</b></h1>
 
 {% highlight yaml %}
 ---
 # Filename: Variable_test.yml
   - name: Variable Example Playbook
     hosts: localhost
-
-    vars:
-      directory_name: notes
-      file_name: sprint_review
 
     tasks:
       - name: Create a directory named "notes" in the current directory
