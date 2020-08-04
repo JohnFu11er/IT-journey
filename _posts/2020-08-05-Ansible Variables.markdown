@@ -49,14 +49,14 @@ These are Ansible's three types of built-in variables:
 
 {% highlight yaml %}
 ---
-# Filename: Variable_test.yml
+# Filename: Variable_test_2.yml
   - name: Variable Example Playbook
     hosts: localhost
 
     tasks:
       - name: Create a directory named "notes" in the current directory
         file:
-          path: ./{'{ file_name }'}
+          path: ./ "{{ '{{' }} file_name {{ '}}' }}"
           state: directory
 
       - name: Create a file named "sprint_review" in the directory ./notes
