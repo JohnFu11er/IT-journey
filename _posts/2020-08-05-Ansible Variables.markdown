@@ -10,8 +10,9 @@ Variables can be defined several ways in Ansible. The below examples are running
     
 <b>Magic variables</b> - Variables that cannot be set directly by the user. For example:<br>
 &emsp; <b><text style="color: red">inventory_hostname</text></b> - The inventory name for the ‘current’ host being iterated over in the play<br><br>
-<b>Facts</b> - Variables that contain information pertinent to the current host (inventory_hostname). They are only available if gathered first. Gathering of facts is the default setting, and may be turned off with: gather_facts= no.</br>
-&emsp; <b><text style="color: red">ansible_facts</text></b> - contains any facts gathered or cached for the inventory_hostname</br>
+
+<b>Facts</b> - Variables that contain information pertinent to the current host (inventory_hostname). They are only available if gathered first. Gathering of facts is the default setting, and may be turned off with: gather_facts= no.<br>
+&emsp; <b><text style="color: red">ansible_facts</text></b> - contains any facts gathered or cached for the inventory_hostname<br>
 
 <b>Assign variables in a playbook</b>
 {% highlight ansible %}
