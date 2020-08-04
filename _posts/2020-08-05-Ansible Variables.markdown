@@ -22,6 +22,7 @@ These are Ansible's three types of built-in variables:
 
 <h1><b>Assigning variables in a playbook</h1></b>
 Variables are created by defining their name and value under the section of your playbook named "vars:"
+Varibles are then called with the name of the variable encapsulated with double curly-braces "{{" variable_name "}}"
 
 {% highlight yaml %}
 ---
@@ -36,7 +37,7 @@ Variables are created by defining their name and value under the section of your
     tasks:
       - name: Create a directory named "notes" in the current directory
         file:
-          path: ./"{{" file_name "}}"
+          path: ./"{{" "file_name" "}}"
           state: directory
 
       - name: Create a file named "sprint_review" in the directory ./notes
