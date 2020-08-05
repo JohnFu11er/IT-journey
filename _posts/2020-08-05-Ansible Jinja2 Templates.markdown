@@ -29,6 +29,7 @@ ansible-playbook jinja_lab_1.yml
 
 <b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text that are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below. The first key in the dictionary is "ansible_facts" which has a nested dictionary as it's value.  This nested dictionary's first key is "all_ipv4_addresses", whose value is "192.168.x.x" (see below):<br>
 {% highlight python %}
+'''
 TASK [display the contents of ansible_facts]************************
 ok: [localhost] => {
     "ansible_facts": {
@@ -36,11 +37,12 @@ ok: [localhost] => {
         "192.168.x.x"
         ]
         ...
+'''
 {% endhighlight %}
 
-<h1><b><u>Parse the contents of the ansible_facts variable to display specific value of a designated dictionary key.</u></b></h1>
-Step 1 Create a new directory named: jinja_lab_2
-Step 2 Navigate to the new directory jinja_lab_2 and create a file named: jinja_lab_2.yml (see below):<br>
+<h1><b><u>Parse ansible_facts to display the value of a dictionary key.</u></b></h1>
+<b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_2
+<b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_2 and create a file named: jinja_lab_2.yml (see below):<br>
 {% highlight yaml %}
 # Filename: jinja_lab_2.yml
 ---
