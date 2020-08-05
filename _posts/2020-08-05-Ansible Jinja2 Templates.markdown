@@ -52,7 +52,7 @@ ok: [localhost] => {
     tasks:
       - name: parse and display the contents of ansible_facts
         debug:
-          var: ansible_facts["all_ipv4_addresses]
+          var: ansible_facts["all_ipv4_addresses"]
 {% endhighlight %}
 
 <b><text style="color: red"> Step 3</text></b> Run the playbook by entering the following code in the terminal window while in the jinja_lab_2 directory<br>
