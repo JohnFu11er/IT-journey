@@ -103,7 +103,7 @@ ok: [localhost] => {
       - name: import variables
         include_vars:
           file: cisco_vars.yml
-          name: my_vars
+          name: cisco_vars
 
       - name: Render Configuration
         template:
@@ -248,4 +248,7 @@ end
 
 {% endhighlight %}
 
-<b><text style="color: red"> Step 5 </text></b> Navigate to the new directory jinja_lab_4 and create a file named: cisco_template.j2 (see below):<br>
+<b><text style="color: red"> Step 5</text></b> Run the playbook by entering the following code in the terminal window while in the jinja_lab_4 directory<br>
+{% highlight html %}
+ansible-playbook jinja_lab_4.yml
+{% endhighlight %}
