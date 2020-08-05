@@ -28,8 +28,7 @@ ansible-playbook jinja_lab_1.yml
 {% endhighlight %}
 
 <b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text that are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below. The first key in the dictionary is "ansible_facts" which has a nested dictionary as it's value.  This nested dictionary's first key is "all_ipv4_addresses", whose value is "192.168.x.x" (see below):<br>
-{% highlight python %}
-'''
+{% highlight html %}
 TASK [display the contents of ansible_facts]************************
 ok: [localhost] => {
     "ansible_facts": {
@@ -37,7 +36,7 @@ ok: [localhost] => {
         "192.168.x.x"
         ]
         ...
-'''
+
 {% endhighlight %}
 
 <h1><b><u>Parse ansible_facts to display the value of a dictionary key.</u></b></h1>
@@ -56,7 +55,7 @@ ok: [localhost] => {
 {% endhighlight %}
 <br>
 Step 3 Verify that the IPv4 addresses of your loocalhost are listed. For example:<br>
-{% highlight python %}
+{% highlight html %}
 TASK [display "all_ipv4_addresses"]************************
 ok: [localhost] => {
     "ansible_facts[\"all_ipv4_addresses\"]": [
