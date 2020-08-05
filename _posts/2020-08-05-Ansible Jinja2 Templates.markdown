@@ -23,7 +23,7 @@ categories: jekyll update
 {% endhighlight%}
 
 <b><text style="color: red"> Step 3</text></b> Run the playbook by entering the following code in the terminal window while in the jinja_lab_1 directory<br>
-{% highlight yaml %}
+{% highlight html %}
 ansible-playbook jinja_lab_1.yml
 {% endhighlight %}
 
@@ -40,7 +40,7 @@ ok: [localhost] => {
 {% endhighlight %}
 
 <h1><b><u>Parse ansible_facts to display the value of a dictionary key.</u></b></h1>
-<b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_2
+<b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_2<br>
 <b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_2 and create a file named: jinja_lab_2.yml (see below):<br>
 {% highlight yaml %}
 # Filename: jinja_lab_2.yml
@@ -53,8 +53,13 @@ ok: [localhost] => {
         debug:
           var: ansible_facts["all_ipv4_addresses]
 {% endhighlight %}
-<br>
-Step 3 Verify that the IPv4 addresses of your loocalhost are listed. For example:<br>
+
+<b><text style="color: red"> Step 3</text></b> Run the playbook by entering the following code in the terminal window while in the jinja_lab_2 directory<br>
+{% highlight html %}
+ansible-playbook jinja_lab_2.yml
+{% endhighlight %}
+
+<b><text style="color: red"> Step 4</text></b> Verify that the IPv4 addresses of your loocalhost are listed. For example:<br>
 {% highlight html %}
 TASK [display "all_ipv4_addresses"]************************
 ok: [localhost] => {
