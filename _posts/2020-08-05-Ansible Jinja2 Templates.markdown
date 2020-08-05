@@ -27,7 +27,7 @@ categories: jekyll update
 ansible-playbook jinja_lab_1.yml
 {% endhighlight %}
 
-<b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text; the contents are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below:<br>
+<b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text that are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below. The first key in the dictionary is "ansible_facts" which has a nested dictionary as it's value.  This nested dictionary's first key is "all_ipv4_addresses", whose value is "192.168.x.x" (see below):<br>
 {% highlight python %}
 TASK [display the contents of ansible_facts]************************
 ok: [localhost] => {
