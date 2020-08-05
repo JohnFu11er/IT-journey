@@ -39,48 +39,49 @@ These are Ansible's three types of built-in variables:
           path: ./{{'{{'}} file_name }}
           state: directory
 
-      - name: Create a file named "sprint_review" in the directory ./notes
+      - name: Create a file named "sprint_review" in the "notes" directory ./notes
         file:
           path: ./{{'{{'}} directory_name }}/{{'{{'}} file_name }}
           state: touch
 {% endhighlight %}
 
 <h1><b>Assigning variables in an inventory file</b></h1>
-&emsp; <b><text style="color: red"> - </text></b>here <br>
+<b><text style="color: red"> - </text></b>Step 1: Make a new directory named: Lab_2<br>
+<b><text style="color: red"> - </text></b>Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)<br>
 
-Step 1: Make a new directory named: Lab_2
-Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)
 {% highlight yaml %}
 # Filename: ansible.cfg
 [defaults]
 invnetory= inventory
 {% endhighlight %}
 
-Step 3: Create the inventory file in the Lab_2 directory (see below)
+<b><text style="color: red"> - </text></b>Step 3: Create the inventory file in the Lab_2 directory (see below)<br>
 {% highlight yaml %}
 # Filename: inventory
 [all:hosts]
 localhost
 
 [all:vars]
+ansible_connection= local
 directory_name= notes
 file_name= sprint_review
 {% endhighlight %}
 
+<b><text style="color: red"> - </text></b>Step 4: Create the Lab_2.yml file in the Lab_2 directory (see below)
 
 {% highlight yaml %}
 ---
-# Filename: Variable_test_2.yml
+# Filename: Lab_2.yml
   - name: Variable Example Playbook
-    hosts: localhost
+    hosts: all
 
     tasks:
       - name: Create a directory named "notes" in the current directory
         file:
-          path: ./{{'{{'}} file_name }}
+          path: ./{{'{{'}} directory_name }}
           state: directory
 
-      - name: Create a file named "sprint_review" in the directory ./notes
+      - name: Create a file named "sprint_review" in the "notes" directory ./notes
         file:
           path: ./{{'{{'}} directory_name }}/{{'{{'}} file_name }}
           state: touch
