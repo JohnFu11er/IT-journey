@@ -20,7 +20,7 @@ These are Ansible's three types of built-in variables:
 &emsp; <b><text style="color: red">ansible_host </text></b> - The IP/name of the target host to use instead of inventory_hostname.<br>
 &emsp; <b><text style="color: red">ansible_user </text></b> - the user Ansible "logs in" as.<br>
 
-<h1><b>Assigning variables in a playbook</b></h1>
+<h1><b><u>Assigning variables in a playbook</u></b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables are created by defining their name and value under the section of your playbook named "vars:"<br>
 &emsp; <b><text style="color: red"> - </text></b>Varibles are then called with the name of the variable encapsulated with double curly-braces {{'{{'}} variable_name }}<br>
 {% highlight yaml %}
@@ -45,7 +45,7 @@ These are Ansible's three types of built-in variables:
           state: touch
 {% endhighlight %}
 
-<h1><b>Assigning variables in an inventory file</b></h1>
+<h1><b><u>Assigning variables in an inventory file</u></b></h1>
 <b><text style="color: red"> - </text></b>Step 1: Make a new directory named: Lab_2<br>
 <b><text style="color: red"> - </text></b>Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)<br>
 
@@ -88,7 +88,7 @@ file_name= sprint_review
 
 {% endhighlight %}
 
-3. Assigning Host variables in an inventory file:
+<h1><b><u>Assigning host variables in an inventory file</u></b></h1>
 {% highlight ansible %}
 
 {% endhighlight %}
