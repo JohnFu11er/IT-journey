@@ -39,7 +39,7 @@ ok: [localhost] => {
 
 {% endhighlight %}
 
-<h1><b><u>Parse ansible_facts to display the value of a dictionary key.</u></b></h1>
+<h1><b><u>Parse ansible_facts to display the value of a dictionary key</u></b></h1>
 <b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_2<br>
 <b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_2 and create a file named: jinja_lab_2.yml (see below):<br>
 {% highlight yaml %}
@@ -68,3 +68,26 @@ ok: [localhost] => {
     ]
 }
 {% endhighlight %}
+
+<h1><b><u>Assign parsed ansible_facts to new variable names in a playbook</u></b></h1>
+<b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_3<br>
+<b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_3 and create a file named: jinja_lab_3.yml (see below):<br>
+{% highlight yaml %}
+# Filename: jinja_lab_3.yml
+---
+  - name: jinja lab 3
+    hosts: localhost
+
+    vars:
+      ipv4_adds: "{{ ansible_facts.all_ipv4_addresses.0 }}"
+      hostname: "{{ ansible_facts.hostname }}"
+      
+    tasks:
+      - name: parse ansible_facts and assign to new variable
+        debug:
+          msg: "The first listed ipv4 address of your computer named {{ hostname }} is: {{ ipv4_adds }}"
+{% endhighlight %
+
+
+
+
