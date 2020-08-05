@@ -46,6 +46,7 @@ These are Ansible's three types of built-in variables:
 {% endhighlight %}
 
 <h1><b>Assigning variables in an inventory file</b></h1>
+&emsp; <b><text style="color: red"> - </text></b>here <br>
 
 {% highlight yaml %}
 ---
