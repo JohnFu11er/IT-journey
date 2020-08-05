@@ -54,6 +54,7 @@ These are Ansible's three types of built-in variables:
 ansible-playbook Lab_1.yml
 {% endhighlight %}
 
+<b><text style="color: red"> - Step 4</text></b> Verify that the "sprint_review" file was created in the "notes" directory<br>
 
 <h1><b><u>Assigning variables in an inventory file</u></b></h1>
 <b><text style="color: red"> - Step 1</text></b> Make a new directory named: Lab_2<br>
@@ -101,6 +102,8 @@ file_name=sprint_review
 ansible-playbook Lab_2.yml
 {% endhighlight %}
 
+<b><text style="color: red"> - Step 6</text></b> Verify that the "sprint_review" file was created in the "notes" directory<br>
+
 <h1><b><u>Assigning host variables in an inventory file</u></b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables that are specifc to only one host can be defined next to the host's name in the inventory file. As you see below "localhost" has three variables defined next to it (ansible_connection, directory_name, and file_name)<br>
 
@@ -115,3 +118,5 @@ localhost ansible_connection=local directory_name=notes file_name=sprint_review
 {% highlight yaml %}
 ansible-playbook Lab_2.yml
 {% endhighlight %}
+
+<b><text style="color: red"> - Step 3</text></b> Verify that the "sprint_review" file was created in the "notes" directory<br>
