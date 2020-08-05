@@ -55,9 +55,19 @@ Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)
 
 [defaults]
 inventory= inventory
+{% endhighlight %}
+
+Step 3: Create the inventory file in the Lab_2 directory (see below)
+{% highlight yaml %}
+# Filename: inventory
+
+[all:hosts]
+localhost ansible_connection=local
+
+[all:vars]
+directory_name= notes
+file_name= sprint_review
 {% endighlight %}
-
-
 {% highlight yaml %}
 ---
 # Filename: Variable_test_2.yml
