@@ -61,7 +61,7 @@ ansible-playbook Lab_1.yml
 {% highlight yaml %}
 # Filename: ansible.cfg
 [defaults]
-invnetory= inventory
+invnetory=inventory
 {% endhighlight %}
 
 <b><text style="color: red"> - Step 3</text></b> Create the inventory file in the Lab_2 directory (see below)<br>
@@ -109,4 +109,9 @@ ansible-playbook Lab_2.yml
 # Filename: inventory
 [all:hosts]
 localhost ansible_connection=local directory_name=notes file_name=sprint_review
+{% endhighlight %}
+
+<b><text style="color: red"> - Step 2</text></b> Run the playbook by entering the following code in the terminal window while in the Lab_2 directory<br>
+{% highlight yaml %}
+ansible-playbook Lab_2.yml
 {% endhighlight %}
