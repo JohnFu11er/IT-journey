@@ -25,6 +25,7 @@ categories: jekyll update
 <b><text style="color: red"> Step 3 </text></b>
 <b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text; the contents are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below:<br>
 {% highlight yaml %}
+<text style="color: green">
 TASK [display the contents of ansible_facts]************************
 ok: [localhost] => {
     "ansible_facts": {
@@ -32,6 +33,7 @@ ok: [localhost] => {
         "192.168.x.x"
         ]
         ...
+<text>
 {% endhighlight %}
 
 <h1><b><u>Parse the contents of the ansible_facts variable to display specific value of a designated dictionary key.</u></b></h1>
