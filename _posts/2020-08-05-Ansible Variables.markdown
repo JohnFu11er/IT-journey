@@ -48,6 +48,7 @@ These are Ansible's three types of built-in variables:
           state: touch
 {% endhighlight %}
 <br>
+
 <b><text style="color: red"> - Step 3</text></b> Run the playbook by entering the following code in the terminal window while in the Lab_1 directory<br>
 {% highlight yaml %}
 ansible-playbook Lab_1.yml
@@ -57,7 +58,6 @@ ansible-playbook Lab_1.yml
 <h1><b><u>Assigning variables in an inventory file</u></b></h1>
 <b><text style="color: red"> - Step 1</text></b> Make a new directory named: Lab_2<br>
 <b><text style="color: red"> - Step 2</text></b> Create the ansible.cfg file in the Lab_2 directory (see below)<br>
-
 {% highlight yaml %}
 # Filename: ansible.cfg
 [defaults]
@@ -98,6 +98,7 @@ file_name=sprint_review
 
 <h1><b><u>Assigning host variables in an inventory file</u></b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables that are specifc to only one host can be defined next to the host's name in the inventory file. As you see below "localhost" has three variables defined next to it (ansible_connection, directory_name, and file_name)<br>
+
 <b><text style="color: red"> - Step 1 </text></b> Edit the inventory file in the Lab_2 directory to reflect the code below:<br>
 {% highlight ansible %}
 # Filename: inventory
