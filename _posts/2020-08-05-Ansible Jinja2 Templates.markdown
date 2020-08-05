@@ -7,7 +7,7 @@ categories: jekyll update
 <b><text style="color: red"> - </text></b>Jinja2 is a modern and designer-friendly templating language for Python that is used by Ansible to enable dynamic expressions and access to variables.<br>
 <b><text style="color: red"> - </text></b>With Jinja2 templates, Ansible users are able to populate a template before the task is sent and executed on the target machine.<br>
 
-<h1><b><u>View the content of the ansible_facts variable from the local host</u></b></h1>
+<h1><b><text style="color: red"> JINJA LAB 1 </text><br><u>View the content of the ansible_facts variable from the local host</u></b></h1>
 <b><text style="color: red"> Step 1 </text></b>Create a new directory named: jinja_lab_1<br>
 <b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_1 and create a file named: jinja_lab_1.yml (see below):<br>
 {% highlight yaml %}
@@ -39,7 +39,7 @@ ok: [localhost] => {
 
 {% endhighlight %}
 
-<h1><b><u>Parse ansible_facts to display the value of a dictionary key</u></b></h1>
+<h1><b><text style="color: red"> JINJA LAB 2 </text><br><u>Parse ansible_facts to display the value of a dictionary key</u></b></h1>
 <b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_2<br>
 <b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_2 and create a file named: jinja_lab_2.yml (see below):<br>
 {% highlight yaml %}
@@ -69,7 +69,7 @@ ok: [localhost] => {
 }
 {% endhighlight %}
 
-<h1><b><u>Assign parsed ansible_facts to new variable names in a playbook</u></b></h1>
+<h1><b><text style="color: red"> JINJA LAB 3 </text><br><u>Assign parsed ansible_facts to new variable names in a playbook</u></b></h1>
 <b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_3<br>
 <b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_3 and create a file named: jinja_lab_3.yml (see below):<br>
 {% highlight yaml %}
