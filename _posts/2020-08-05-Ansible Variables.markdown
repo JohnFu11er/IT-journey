@@ -52,6 +52,8 @@ Step 1: Make a new directory named: Lab_2
 Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)
 {% highlight yaml %}
 # Filename: ansible.cfg
+[defaults]
+invnetory= inventory
 {% endhighlight %}
 
 
