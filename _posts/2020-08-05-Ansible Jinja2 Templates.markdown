@@ -28,7 +28,7 @@ ansible-playbook Lab_1.yml
 {% endhighlight %}
 
 <b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text; the contents are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below:<br>
-{% highlight html style="color: green" %}
+{% highlight html %}
 TASK [display the contents of ansible_facts]************************
 ok: [localhost] => {
     "ansible_facts": {
