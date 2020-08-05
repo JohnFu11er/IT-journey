@@ -49,6 +49,14 @@ These are Ansible's three types of built-in variables:
 &emsp; <b><text style="color: red"> - </text></b>here <br>
 
 Step 1: Make a new directory named: Lab_2
+Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)
+{% highlight yaml %}
+# Filename: ansible.cfg
+
+[defaults]
+inventory= inventory
+{% endighlight %}
+
 
 {% highlight yaml %}
 ---
