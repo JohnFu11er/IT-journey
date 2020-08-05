@@ -22,7 +22,8 @@ These are Ansible's three types of built-in variables:
 
 <h1><b>Assigning variables in a playbook</b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables are created by defining their name and value under the section of your playbook named "vars:"<br>
-&emsp; <b><text style="color: red"> - </text></b>Varibles are then called with the name of the variable encapsulated with double curly-braces {{ variable_name }}<br>
+&emsp; <b><text style="color: red"> - </text></b>Variables are then called with the name of the variable encapsulated with double curly-braces {{ variable_name }}<br>
+
 {% highlight yaml %}
 ---
 # Filename: Variable_test.yml
@@ -36,7 +37,7 @@ These are Ansible's three types of built-in variables:
     tasks:
       - name: Create a directory named "notes" in the current directory
         file:
-          path: ./{{'{{'}} file_name }}
+          path: ./{{'{{'}} directory_name }}
           state: directory
 
       - name: Create a file named "sprint_review" in the directory ./notes
@@ -44,29 +45,53 @@ These are Ansible's three types of built-in variables:
           path: ./{{'{{'}} directory_name }}/{{'{{'}} file_name }}
           state: touch
 {% endhighlight %}
+<br>
 
 <h1><b>Assigning variables in an inventory file</b></h1>
+&emsp; <b><text style="color: red"> - </text></b>here <br>
+
+Step 1: Make a new directory named: Lab_2
+Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)
+{% highlight yaml %}
+# Filename: ansible.cfg
+
+[defaults]
+inventory= inventory
+{% endighlight %}
+
+Step 3: Create the inventory file in the Lab_2 directory (see below)
+{% highlight yaml %}
+# Filename: inventory
+
+[all:hosts]
+localhost ansible_connection=local
+
+[all:vars]
+directory_name= notes
+file_name= sprint_review
+{% endighlight %}
+
+Step 4: Create the Lab_2.yml file in the Lab_2 directory (see below)
 
 {% highlight yaml %}
 ---
 # Filename: Variable_test_2.yml
   - name: Variable Example Playbook
-    hosts: localhost
+    hosts: all
 
     tasks:
       - name: Create a directory named "notes" in the current directory
         file:
-          path: ./{{'{{'}} file_name }}
+          path: ./{{'{{'}} directory_name }}
           state: directory
 
       - name: Create a file named "sprint_review" in the directory ./notes
         file:
           path: ./{{'{{'}} directory_name }}/{{'{{'}} file_name }}
           state: touch
-
 {% endhighlight %}
 
-3. Assigning Host variables in an inventory file:
+Assigning Host variables in an inventory file:
 {% highlight ansible %}
 
 {% endhighlight %}
