@@ -49,6 +49,10 @@ These are Ansible's three types of built-in variables:
 {% endhighlight %}
 <br>
 <b><text style="color: red"> - Step 3</text></b> Run the playbook by entering the following code in the terminal window while in the Lab_1 directory<br>
+{% highlight yaml %}
+ansible-playbook Lab_1.yml
+{% endhighlight %}
+
 
 <h1><b><u>Assigning variables in an inventory file</u></b></h1>
 <b><text style="color: red"> - Step 1</text></b> Make a new directory named: Lab_2<br>
