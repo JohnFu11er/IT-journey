@@ -22,13 +22,13 @@ categories: jekyll update
          var: ansible_facts
 {% endhighlight%}
 
-<b><text style="color: red"> - Step 3</text></b> Run the playbook by entering the following code in the terminal window while in the Lab_1 directory<br>
+<b><text style="color: red"> Step 3</text></b> Run the playbook by entering the following code in the terminal window while in the jinja_lab_1 directory<br>
 {% highlight yaml %}
-ansible-playbook Lab_1.yml
+ansible-playbook jinja_lab_1.yml
 {% endhighlight %}
 
 <b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text; the contents are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below:<br>
-{% highlight html %}
+{% highlight yaml %}
 TASK [display the contents of ansible_facts]************************
 ok: [localhost] => {
     "ansible_facts": {
