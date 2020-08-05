@@ -5,7 +5,7 @@ date: 2020-08-05 09:00:00 -0400
 categories: jekyll update
 ---
 <b><text style="color: red"> - </text></b>Jinja2 is a modern and designer-friendly templating language for Python that is used by Ansible to enable dynamic expressions and access to variables.<br>
-<b><text style="color: red"> - </text></b>With Jinja2 templates, Ansible users are able to populate a template before the task is sent and executed on the target machine.<br>
+<b><text style="color: red"> - </text></b>With Jinja2 templates, Ansible users are able to populate a template before the task is sent and executed on the target machine.<br><br>
 
 <h1><b><text style="color: red"> JINJA LAB 1: </text><u>View the content of the ansible_facts variable from the local host</u></b></h1>
 <b><text style="color: red"> Step 1 </text></b>Create a new directory named: jinja_lab_1<br>
@@ -38,6 +38,7 @@ ok: [localhost] => {
         ...
 
 {% endhighlight %}
+<br><br>
 
 <h1><b><text style="color: red"> JINJA LAB 2: </text><u>Parse ansible_facts to display the value of a dictionary key</u></b></h1>
 <b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_2<br>
@@ -68,7 +69,7 @@ ok: [localhost] => {
     ]
 }
 {% endhighlight %}
-
+<br><br>
 <h1><b><text style="color: red"> JINJA LAB 3: </text><u>Assign parsed ansible_facts to new variable names in a playbook</u></b></h1>
 <b><text style="color: red"> Step 1 </text></b> Create a new directory named: jinja_lab_3<br>
 <b><text style="color: red"> Step 2 </text></b> Navigate to the new directory jinja_lab_3 and create a file named: jinja_lab_3.yml (see below):<br>
@@ -79,13 +80,13 @@ ok: [localhost] => {
     hosts: localhost
 
     vars:
-      ipv4_adds: "{{ '{{' }} ansible_facts.all_ipv4_addresses.0 }}""
-      hostname: "{{ '{{' }} ansible_facts.hostname }}""
+      ipv4_adds: "{{ '{{' }} ansible_facts.all_ipv4_addresses.0 }}"
+      hostname: "{{ '{{' }} ansible_facts.hostname }}"
       
     tasks:
       - name: parse ansible_facts and assign to new variable
         debug:
-          msg: "The first listed ipv4 address of your computer named {{ hostname }} is: {{ ipv4_adds }}"
+          msg: "The first listed ipv4 address of your computer named {{ '{{' }} hostname }} is: {{ '{{' }} ipv4_adds }}"
 {% endhighlight %}
 
 
