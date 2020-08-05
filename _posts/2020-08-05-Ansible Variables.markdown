@@ -90,6 +90,3 @@ Step 4: Create the Lab_2.yml file in the Lab_2 directory (see below)
 {% endhighlight %}
 
 Assigning Host variables in an inventory file:
-{% highlight ansible %}
-
-{% endhighlight %}
