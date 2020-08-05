@@ -46,27 +46,25 @@ These are Ansible's three types of built-in variables:
 {% endhighlight %}
 
 <h1><b>Assigning variables in an inventory file</b></h1>
+&emsp; <b><text style="color: red"> - </text></b>here <br>
 
+Step 1: Make a new directory named: Lab_2
+Step 2: Create the ansible.cfg file in the Lab_2 directory (see below)
 {% highlight yaml %}
----
-# Filename: Variable_test_2.yml
-  - name: Variable Example Playbook
-    hosts: localhost
+# Filename: ansible.cfg
 
-    tasks:
-      - name: Create a directory named "notes" in the current directory
-        file:
-          path: ./{{'{{'}} file_name }}
-          state: directory
+[defaults]
+inventory= inventory
+{% endighlight %}
 
-      - name: Create a file named "sprint_review" in the directory ./notes
-        file:
-          path: ./{{'{{'}} directory_name }}/{{'{{'}} file_name }}
-          state: touch
+Step 3: Create the inventory file in the Lab_2 directory (see below)
+{% highlight yaml %}
+# Filename: inventory
 
-{% endhighlight %}
+[all:hosts]
+localhost ansible_connection=local
 
-3. Assigning Host variables in an inventory file:
-{% highlight ansible %}
-
-{% endhighlight %}
+[all:vars]
+directory_name= notes
+file_name= sprint_review
+{% endighlight %}
