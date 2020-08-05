@@ -23,4 +23,26 @@ Step 2 Navigate to the new directory jinja_lab_1 and create a file named: jinja_
 Step 3 Verify that the contents of the ansible_facts varible are displayed on the screen.  You will see green text that is formatted as a dictionary with ":" seperated key/value pairs.<br>
 
 <h1><b><u>Parse the contents of the ansible_facts variable to display specific value of a designated dictionary key.</u></b></h1>
+Step 1 Create a new directory named: jinja_lab_2
+Step 2 Navigate to the new directory jinja_lab_2 and create a file named: jinja_lab_2.yml (see below):<br>
+{% highlight yaml %}
+# Filename: jinja_lab_2.yml
+---
+  - name: jinja lab 2
+    hosts: localhost
 
+    tasks:
+      - name: parse and display the contents of ansible_facts
+        debug:
+          var: ansible_facts["all_ipv4_addresses]
+{% endhighlight %}
+<br>
+Step 3 Verify that the IPv4 addresses of your loocalhost are listed. For example:<br>
+{% highlight yaml %}
+TASK [display "all_ipv4_addresses"]************************
+ok: [localhost] => {
+    "ansible_facts[\"all_ipv4_addresses\"]": [
+        "192.168.x.x"
+    ]
+}
+{% endhighlight %}
