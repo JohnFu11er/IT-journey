@@ -79,8 +79,8 @@ ok: [localhost] => {
     hosts: localhost
 
     vars:
-      ipv4_adds: "{{ ansible_facts.all_ipv4_addresses.0 }}"
-      hostname: "{{ ansible_facts.hostname }}"
+      ipv4_adds: "{{ '{{' }} ansible_facts.all_ipv4_addresses.0 }}""
+      hostname: "{{ '{{' }} ansible_facts.hostname }}""
       
     tasks:
       - name: parse ansible_facts and assign to new variable
