@@ -23,9 +23,12 @@ These are Ansible's three types of built-in variables:
 <h1><b><u>Assigning variables in a playbook</u></b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables are created by defining their name and value under the section of your playbook named "vars:"<br>
 &emsp; <b><text style="color: red"> - </text></b>Varibles are then called with the name of the variable encapsulated with double curly-braces {{'{{'}} variable_name }}<br>
+
+<b><text style="color: red"> - Step 1 </text></b> Make a new directory named: Lab_1<br>
+<b><text style="color: red"> - Step 2 </text></b> Create the Lab_1.yml file in the Lab_1 directory (see below)<br>
 {% highlight yaml %}
 ---
-# Filename: Variable_test.yml
+# Filename: Lab_1.yml
   - name: Variable Example Playbook
     hosts: localhost
 
