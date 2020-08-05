@@ -48,6 +48,8 @@ These are Ansible's three types of built-in variables:
 <h1><b>Assigning variables in an inventory file</b></h1>
 &emsp; <b><text style="color: red"> - </text></b>here <br>
 
+Step 1: Make a new directory named: Lab_2
+
 {% highlight yaml %}
 ---
 # Filename: Variable_test_2.yml
