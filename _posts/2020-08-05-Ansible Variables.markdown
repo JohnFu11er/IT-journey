@@ -22,7 +22,7 @@ These are Ansible's three types of built-in variables:
 
 <h1><b>Assigning variables in a playbook</b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables are created by defining their name and value under the section of your playbook named "vars:"<br>
-&emsp; <b><text style="color: red"> - </text></b>Varibles are then called with the name of the variable encapsulated with double curly-braces {{ variable_name }}<br>
+&emsp; <b><text style="color: red"> - </text></b>Varibles are then called with the name of the variable encapsulated with double curly-braces {{'{{'}} variable_name }}<br>
 {% highlight yaml %}
 ---
 # Filename: Variable_test.yml
