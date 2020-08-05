@@ -86,7 +86,7 @@ ok: [localhost] => {
       - name: parse ansible_facts and assign to new variable
         debug:
           msg: "The first listed ipv4 address of your computer named {{ hostname }} is: {{ ipv4_adds }}"
-{% endhighlight %
+{% endhighlight %}
 
 
 
