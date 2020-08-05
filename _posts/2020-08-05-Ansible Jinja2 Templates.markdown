@@ -28,7 +28,7 @@ ansible-playbook jinja_lab_1.yml
 {% endhighlight %}
 
 <b><text style="color: red"> Step 4 </text></b> You should now see a long dictionary of green text; the contents are key/value pairs seperated by ":". Each of these values was gathered by ansible when it ran the "jijna_lab_1.yml" playbook. Scroll up through the green text until you get to the top of the section titled "TASK [display the contents of ansible_facts]. You shoud see code similar to the code below:<br>
-{% highlight yaml %}
+{% highlight python %}
 TASK [display the contents of ansible_facts]************************
 ok: [localhost] => {
     "ansible_facts": {
@@ -54,7 +54,7 @@ Step 2 Navigate to the new directory jinja_lab_2 and create a file named: jinja_
 {% endhighlight %}
 <br>
 Step 3 Verify that the IPv4 addresses of your loocalhost are listed. For example:<br>
-{% highlight yaml %}
+{% highlight python %}
 TASK [display "all_ipv4_addresses"]************************
 ok: [localhost] => {
     "ansible_facts[\"all_ipv4_addresses\"]": [
