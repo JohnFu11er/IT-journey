@@ -96,6 +96,11 @@ file_name=sprint_review
 {% endhighlight %}
 <br>
 
+<b><text style="color: red"> - Step 5</text></b> Run the playbook by entering the following code in the terminal window while in the Lab_2 directory<br>
+{% highlight yaml %}
+ansible-playbook Lab_2.yml
+{% endhighlight %}
+
 <h1><b><u>Assigning host variables in an inventory file</u></b></h1>
 &emsp; <b><text style="color: red"> - </text></b>Variables that are specifc to only one host can be defined next to the host's name in the inventory file. As you see below "localhost" has three variables defined next to it (ansible_connection, directory_name, and file_name)<br>
 
